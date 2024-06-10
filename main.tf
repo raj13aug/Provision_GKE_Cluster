@@ -31,9 +31,9 @@ module "gke" {
     {
       name           = "node-pool"
       machine_type   = "e2-standard-2"
-      node_locations = "us-central-b,us-central-c"
-      min_count      = 2
-      max_count      = 2
+      node_locations = "us-central1-b,us-central1-c"
+      min_count      = 1
+      max_count      = 1
       disk_size_gb   = 30
       spot           = false
       auto_upgrade   = true
