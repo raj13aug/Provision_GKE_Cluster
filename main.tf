@@ -5,12 +5,11 @@ provider "kubernetes" {
   host                   = "https://${module.gke.endpoint}"
   token                  = data.google_client_config.default.access_token
   cluster_ca_certificate = base64decode(module.gke.ca_certificate)
-  # version                = "~> 2.10"
 }
 
 module "gke" {
   source                     = "terraform-google-modules/kubernetes-engine/google"
-  version                    = "26.1.1"
+  version                    = "31.0.0"
   project_id                 = var.project_id
   name                       = "${var.cluster_name}-${var.env_name}"
   regional                   = true
