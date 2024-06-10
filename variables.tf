@@ -54,5 +54,5 @@ variable "ip_range_services_name" {
 variable "zones" {
   type        = list(string)
   description = "The project ID to host the cluster in"
-  default     = ["europe-west2-a", "europe-west2-b"]
+  default     = ["us-central1-a", "us-central1-b"]
 }
