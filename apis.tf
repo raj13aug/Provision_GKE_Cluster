@@ -2,6 +2,7 @@ locals {
   all_project_services = concat(var.gcp_service_list, [
     "storage.googleapis.com",
     "container.googleapis.com"
+  ])
 }
 
 resource "google_project_service" "enabled_apis" {
