@@ -1,8 +1,8 @@
 locals {
   all_project_services = concat(var.gcp_service_list, [
     "storage.googleapis.com",
-    "container.googleapis.com",
-    "compute.googleapis.com"
+    "container.googleapis.com"
+    # "compute.googleapis.com"
   ])
 }
 
