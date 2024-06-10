@@ -5,6 +5,10 @@ terraform {
       source  = "hashicorp/google"
       version = "5.32.0"
     }
+    google-beta = {
+      source  = "hashicorp/google-beta"
+      version = "5.32.0"
+    }
     local = {
       source  = "hashicorp/local"
       version = "2.5.1"
@@ -17,6 +21,13 @@ terraform {
 }
 
 provider "google" {
+  credentials = file("terraform_credentails.json")
+  project     = var.project_id
+  region      = "us-central1"
+  zone        = "us-central1-a"
+}
+
+provider "google-beta" {
   credentials = file("terraform_credentails.json")
   project     = var.project_id
   region      = "us-central1"
