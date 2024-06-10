@@ -5,6 +5,7 @@ provider "kubernetes" {
   host                   = "https://${module.gke.endpoint}"
   token                  = data.google_client_config.default.access_token
   cluster_ca_certificate = base64decode(module.gke.ca_certificate)
+  # version                = "~> 2.10"
 }
 
 module "gke" {
@@ -29,9 +30,9 @@ module "gke" {
   node_pools = [
     {
       name            = "node-pool"
-      machine_type    = "us-central1"
-      node_locations  = "us-central1-b,us-central1-a"
-      min_count       = 1
+      machine_type    = "e2-standard-2"
+      node_locations  = "europe-west2-b,europe-west2-c"
+      min_count       = 2
       max_count       = 2
       disk_size_gb    = 30
       spot            = false
