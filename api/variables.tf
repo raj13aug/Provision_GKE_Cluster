@@ -31,7 +31,3 @@ variable "storage_class" {
   type = string
 }
 
-variable "folder_path" {
-  type        = string
-  description = "Path to your folder"
-}
