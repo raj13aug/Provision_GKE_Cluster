@@ -9,7 +9,7 @@ provider "kubernetes" {
 
 module "gke" {
   source                     = "terraform-google-modules/kubernetes-engine/google"
-  version                    = "31.0.0"
+  version                    = "31.1.0"
   project_id                 = var.project_id
   name                       = "${var.cluster_name}-${var.env_name}"
   regional                   = true
