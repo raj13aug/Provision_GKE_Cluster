@@ -9,7 +9,7 @@ provider "kubernetes" {
 
 module "gke" {
   source                     = "terraform-google-modules/kubernetes-engine/google"
-  version                    = "36.0.2"
+  version                    = "33.0.3"
   project_id                 = var.project_id
   name                       = "${var.cluster_name}-${var.env_name}"
   regional                   = true
@@ -25,6 +25,7 @@ module "gke" {
   filestore_csi_driver       = false
   create_service_account     = true
   logging_service            = "logging.googleapis.com/kubernetes"
+  deletion_protection        = false
 
   node_pools = [
     {

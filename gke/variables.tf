@@ -20,7 +20,7 @@ variable "env_name" {
 variable "cluster_name" {
   type        = string
   description = "The name for the GKE cluster"
-  default     = ""
+  default     = "cloudroot7"
 }
 variable "network" {
   type        = string

@@ -2,7 +2,7 @@
 
 module "gke_auth" {
   source               = "terraform-google-modules/kubernetes-engine/google//modules/auth"
-  version              = "31.1.0"
+  version              = "33.0.3"
   project_id           = var.project_id
   location             = module.gke.location
   cluster_name         = module.gke.name
