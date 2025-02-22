@@ -3,7 +3,7 @@
 variable "project_id" {
   type        = string
   description = "The project ID to host the cluster in"
-  default     = "mytesting-400910"
+  default     = "vm-group-448915"
 }
 variable "region" {
   type        = string

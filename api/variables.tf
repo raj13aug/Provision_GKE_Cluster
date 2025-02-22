@@ -8,7 +8,7 @@ variable "gcp_service_list" {
 variable "project_id" {
   type        = string
   description = "The project ID to host the cluster in"
-  default     = "mytesting-400910"
+  default     = "vm-group-448915"
 }
 variable "region" {
   type        = string
@@ -19,6 +19,7 @@ variable "region" {
 variable "bucket_name_source" {
   type        = string
   description = "The name of our bucket"
+  default     = "cloudroot7-gke-bucket"
 }
 
 variable "bucket_location" {
@@ -28,6 +29,7 @@ variable "bucket_location" {
 
 
 variable "storage_class" {
-  type = string
+  type    = string
+  default = "STANDARD"
 }
 
