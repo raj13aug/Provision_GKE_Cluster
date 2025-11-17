@@ -9,7 +9,7 @@ provider "kubernetes" {
 
 module "gke" {
   source                     = "terraform-google-modules/kubernetes-engine/google"
-  version                    = "33.0.3"
+  version                    = "41.0.2"
   project_id                 = var.project_id
   release_channel            = "STABLE"
   name                       = "${var.cluster_name}-${var.env_name}"
